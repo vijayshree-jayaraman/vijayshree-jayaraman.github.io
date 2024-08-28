@@ -1,14 +1,12 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
-nav: true
+title: public goods
 nav_order: 4
 ---
-Every dataset has its own story to tell. But even when datasets are public, it's often hard for people to use them easily to tell those stories. We need more stories coming from the data we already have, instead of lots of people working separately to clean the same data over and over.
+Every dataset has its own story to tell. But even when datasets are public, they’re often uploaded in formats that make them hard to access for those who could tell these stories.
 
-We need more stories from existing data, not repeated cleaning efforts. Economist Julie Nelson's idea of interconnectedness applies here: treating data cleaning as caring for shared information. This approach is not only efficient but just, allowing everyone to ideate rather than get stuck cleaning.  It opens up opportunities for discovering new stories and encourages fair collaboration, benefiting everyone involved.
+Instead of just repeating cleaning efforts, we need to focus on uncovering new insights from the data. Julie Nelson's idea of interconnectedness fits here: treating data cleaning as a shared responsibility. This way, everyone can spend more time generating ideas and less time stuck on cleaning tasks. It opens up opportunities for discovering new stories and encourages fair collaboration, benefiting everyone involved.
 
 {% if site.data.repositories.github_repos %}
 
