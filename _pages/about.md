@@ -14,6 +14,8 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+Hello, welcome to my website :) 
 
-I love working with data and using math to understand big questions about how people see themselves and others in society. What really makes me happy is explaining tricky economic ideas in ways that anyone can understand.
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am Research Associate at [Centre for Advance Financial Research] (https://www.cafral.org.in/Research.aspx). I completed my undergraduate and postgraduate in economics from [Azim Premji University](https://azimpremjiuniversity.edu.in/)
+
+I like working with data and using econometrics to understand larger questions about social identities. To be able communicate economic concepts and make publicly available datasets more accessible to all brings me joy :)
