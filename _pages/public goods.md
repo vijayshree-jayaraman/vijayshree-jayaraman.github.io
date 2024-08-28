@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /repositories/
+permalink: /public goods/
 title: public goods
 nav_order: 4
 ---
