@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /work/
-title: work
-description: Here are a few projects I have been working on. 
-nav: true
+title: Here are a few projects I have been working on. 
+description: 
+nav: false
 nav_order: 2
 ---
 
