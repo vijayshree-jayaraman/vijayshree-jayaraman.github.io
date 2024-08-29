@@ -57,19 +57,22 @@
           </li>
 
           <!-- Add Public Goods Page -->
-          <li class="nav-item {% if page.permalink == '/public-goods/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/public-goods/' | relative_url }}">
-              public Goods
-              {% if page.permalink == '/public-goods/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
+          {% assign public_goods_page = site.pages | where: 'permalink', '/public-goods/' | first %}
+          {% if public_goods_page.nav != false %}
+            <li class="nav-item {% if page.permalink == '/public-goods/' %}active{% endif %}">
+              <a class="nav-link" href="{{ '/public-goods/' | relative_url }}">
+                Public Goods
+                {% if page.permalink == '/public-goods/' %}
+                  <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            </li>
+          {% endif %}
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% if p.nav != false and p.autogen == null %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -127,7 +130,7 @@
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
+            <!-- Toggle theme mode -->
             <li class="toggle-container">
               <button id="light-toggle" title="Change theme">
                 <i class="ti ti-sun-moon" id="light-toggle-system"></i>
