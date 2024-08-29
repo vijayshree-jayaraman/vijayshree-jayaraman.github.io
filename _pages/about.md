@@ -4,6 +4,37 @@ title: about
 permalink: /
 
 
+<style>
+  .selected-papers {
+    margin-top: 20px;
+  }
+
+  .paper-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .paper-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .paper-item img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-left: 10px;
+    border: 1px solid #ddd; /* Optional: Adds a border around the image */
+  }
+
+  .excerpt-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #007bff; /* Adjust to match your theme */
+    text-decoration: underline;
+  }
+</style>
+
 profile:
   align: right
   image: prof_pic.jpg
@@ -25,8 +56,8 @@ I like working with data and using econometrics to understand bigger questions a
 
 <div class="selected-papers">
   <div class="paper-item">
-    <a href="https://www.thehindu.com/opinion/op-ed/the-nobel-in-economics-as-a-need-to-course-correct/article67537202.ece" target="_blank">
-      <img src="{{ '/assets/img/paper1_image.jpg' | relative_url }}" alt="Paper 1 Image" style="width: 200px; height: auto;"/>
+    <a href="https://www.dropbox.com/scl/fi/stilxwgaxlbu76lip8t4b/hindu-article_nov17.jpeg?rlkey=a68asige831nu2z9ajz0lhv0x&dl=0" target="_blank">
+      <img src="{{ '/assets/img/paper1_image.jpg' | relative_url }}" alt="to get pass the paywall!" style="width: 200px; height: auto;"/>
     </a>
     <p><a href="https://www.thehindu.com/opinion/op-ed/the-nobel-in-economics-as-a-need-to-course-correct/article67537202.ece" target="_blank"> The Nobel in economics as a need to course correct </a></p>
   </div>
