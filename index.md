@@ -9,10 +9,9 @@ description: Home — Vijayshree Jayaraman
     <div class="hero-inner">
       <h1>Your Name — Vijayshree Jayaraman</h1>
       <p class="lede">Economist · Research Associate · Data-focused writer. Short tagline describing your focus and voice.</p>
-      <p class="hero-cta">
-        <a class="btn" href="/writing/">See my writing</a>
-        <a class="btn btn-outline" href="/data/">Explore data</a>
-      </p>
+  <p>
+  <img src="/assets/images/profile.jpeg" alt="Vijayshree Jayaraman" style="max-width:200px; border-radius: 50%;">
+</p>
     </div>
   </section>
 
