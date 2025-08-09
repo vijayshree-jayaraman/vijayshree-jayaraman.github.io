@@ -15,10 +15,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
   <style>
-    :root {
-      --accent: #2f6fdb;
-    }
-
     html, body {
       overflow-x: hidden;
       overflow-y: auto;
@@ -31,41 +27,50 @@
       margin: 0;
       padding: 0;
       line-height: 1.5;
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Theme Variables */
-    body[data-theme="light"] {
-      --header-bg: #ffffff;
-      --header-text: #333333;
-      --body-bg: #ffffff;
-      --body-text: #333333;
-      --border-color: rgba(0,0,0,0.1);
-      background-color: var(--body-bg);
-      color: var(--body-text);
+    /* Light theme (default) */
+    body {
+      background-color: #ffffff;
+      color: #333333;
     }
 
-    body[data-theme="dark"] {
-      --header-bg: #1a1a1a;
-      --header-text: #f5f5f5;
-      --body-bg: #0d1117;
-      --body-text: #f5f5f5;
-      --border-color: rgba(255,255,255,0.1);
-      background-color: var(--body-bg);
-      color: var(--body-text);
+    .site-header {
+      background-color: #ffffff;
+      color: #333333;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .site-footer {
+      background-color: #f5f5f5;
+      color: #555555;
+    }
+
+    /* Dark theme */
+    body.dark-theme {
+      background-color: #0d1117;
+      color: #f5f5f5;
+    }
+
+    body.dark-theme .site-header {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    body.dark-theme .site-footer {
+      background-color: #111111;
+      color: #cccccc;
     }
 
     /* HEADER STYLES */
     .site-header {
-      background: var(--header-bg);
-      color: var(--header-text);
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       transition: background-color 0.3s ease, color 0.3s ease;
-      border-bottom: 1px solid var(--border-color);
     }
 
     .nav-container {
@@ -79,51 +84,14 @@
     }
 
     .brand {
-      flex: 0 0 auto;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .brand {
       font-weight: 700;
       font-size: 1.5rem;
       text-decoration: none;
       color: inherit;
-      transition: color 0.3s ease;
     }
 
     .brand:hover {
       opacity: 0.8;
-    }
-
-    .icon-btn {
-      background: transparent;
-      border: 2px solid var(--border-color);
-      border-radius: 6px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: inherit;
-      padding: 0.5rem;
-      min-width: 44px;
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .icon-btn:hover {
-      background: var(--border-color);
-      transform: translateY(-1px);
-    }
-
-    .icon-btn:focus {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
     }
 
     /* Navigation styles */
@@ -139,18 +107,58 @@
       font-size: 1rem;
       color: inherit;
       padding: 0.5rem 0;
-      position: relative;
       transition: color 0.3s ease;
     }
 
     .site-nav a:hover {
-      color: var(--accent);
+      color: #2f6fdb;
     }
 
     .site-nav a:focus {
-      outline: 2px solid var(--accent);
+      outline: 2px solid #2f6fdb;
       outline-offset: 2px;
       border-radius: 4px;
+    }
+
+    /* Right side actions */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .icon-btn {
+      background: transparent;
+      border: 2px solid rgba(0,0,0,0.1);
+      border-radius: 6px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: inherit;
+      padding: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    body.dark-theme .icon-btn {
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    .icon-btn:hover {
+      background: rgba(0,0,0,0.05);
+      transform: translateY(-1px);
+    }
+
+    body.dark-theme .icon-btn:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .icon-btn:focus {
+      outline: 2px solid #2f6fdb;
+      outline-offset: 2px;
     }
 
     /* Mobile Navigation */
@@ -169,12 +177,16 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--header-bg);
+        background-color: inherit;
         flex-direction: column;
         gap: 0;
         padding: 1rem;
-        border-top: 1px solid var(--border-color);
+        border-top: 1px solid rgba(0,0,0,0.1);
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      body.dark-theme .site-nav {
+        border-top-color: rgba(255,255,255,0.1);
       }
 
       .site-nav.show {
@@ -183,8 +195,12 @@
 
       .site-nav a {
         padding: 0.75rem 0;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         width: 100%;
+      }
+
+      body.dark-theme .site-nav a {
+        border-bottom-color: rgba(255,255,255,0.1);
       }
 
       .site-nav a:last-child {
@@ -206,17 +222,19 @@
 
     /* Footer */
     .site-footer {
-      background: var(--header-bg);
-      color: var(--header-text);
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       margin-top: 3rem;
-      border-top: 1px solid var(--border-color);
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    body.dark-theme .site-footer {
+      border-top-color: rgba(255,255,255,0.1);
     }
 
     .site-footer a {
-      color: var(--accent);
+      color: #2f6fdb;
       text-decoration: none;
       margin: 0 0.5rem;
       transition: opacity 0.3s ease;
@@ -245,16 +263,9 @@
         border-radius: 8px;
       }
     }
-
-    /* Smooth transitions for theme changes only */
-    .site-header,
-    .site-footer,
-    body {
-      transition: background-color 0.3s ease, color 0.3s ease !important;
-    }
   </style>
 </head>
-<body data-theme="light">
+<body>
   <header class="site-header">
     <div class="nav-container">
       <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
@@ -293,44 +304,37 @@
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <script>
-    // Enhanced theme toggle with immediate visual updates
+    // Simple and reliable theme toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
     
-    // Initialize theme from localStorage or default to light
+    // Initialize theme
     function initTheme() {
       const savedTheme = localStorage.getItem('theme') || 'light';
-      setTheme(savedTheme);
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+      } else {
+        body.classList.remove('dark-theme');
+        themeIcon.textContent = '🌙';
+      }
     }
     
-    function setTheme(theme) {
-      // Force immediate update
-      body.setAttribute('data-theme', theme);
-      body.style.setProperty('--header-bg', theme === 'light' ? '#ffffff' : '#1a1a1a');
-      body.style.setProperty('--header-text', theme === 'light' ? '#333333' : '#f5f5f5');
-      body.style.setProperty('--body-bg', theme === 'light' ? '#ffffff' : '#0d1117');
-      body.style.setProperty('--body-text', theme === 'light' ? '#333333' : '#f5f5f5');
-      body.style.setProperty('--border-color', theme === 'light' ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.1)');
-      
-      // Force repaint
-      body.style.backgroundColor = theme === 'light' ? '#ffffff' : '#0d1117';
-      body.style.color = theme === 'light' ? '#333333' : '#f5f5f5';
-      
-      themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
-      localStorage.setItem('theme', theme);
-      
-      // Trigger reflow to ensure changes apply immediately
-      body.offsetHeight;
-    }
-    
+    // Toggle theme
     function toggleTheme() {
-      const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      setTheme(newTheme);
+      if (body.classList.contains('dark-theme')) {
+        body.classList.remove('dark-theme');
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
     }
     
-    // Enhanced mobile navigation
+    // Mobile navigation
     const navToggle = document.getElementById('nav-toggle');
     const siteNav = document.getElementById('site-nav');
     
