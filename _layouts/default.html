@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <title>Theme Toggle Fix</title>
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       background: #fff;
       color: #000;
+      transition: background-color 0.3s, color 0.3s;
     }
     body[data-theme="dark"] {
       background: #000;
@@ -21,6 +21,7 @@
       background: inherit;
       padding: 1rem;
       border-bottom: 1px solid rgba(0,0,0,0.1);
+      color: inherit;
     }
     body[data-theme="dark"] .site-header {
       border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -65,7 +66,6 @@
       height: 24px;
     }
 
-    /* Mobile */
     @media (max-width: 820px) {
       .site-nav {
         flex-direction: column;
@@ -80,8 +80,6 @@
         display: inline-flex;
       }
     }
-
-    /* Desktop */
     @media (min-width: 821px) {
       .nav-toggle {
         display: none;
@@ -92,20 +90,21 @@
 <body data-theme="light">
   <header class="site-header">
     <div class="nav-container">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="brand" href="/">My Site</a>
 
-      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu">
+      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" title="Toggle menu">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
           <path d="M3 6h18M3 12h18M3 18h18"/>
         </svg>
       </button>
 
-      <nav id="site-nav" class="site-nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/public-goods/' | relative_url }}">Public Goods</a>
-        <a href="{{ '/writing/' | relative_url }}">Writing</a>
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+      <nav id="site-nav" class="site-nav" role="navigation">
+        <a href="/">Home</a>
+        <a href="/public-goods/">Public Goods</a>
+        <a href="/writing/">Writing</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
           <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <!-- moon icon initially -->
             <path d="M21.64 13.64A9 9 0 1110.36 2.36 7 7 0 0021.64 13.64z"/>
           </svg>
         </button>
@@ -114,12 +113,8 @@
   </header>
 
   <main>
-    {{ content }}
+    <p>Hello, content here.</p>
   </main>
-
-  <footer>
-    <p>© {{ site.title }}</p>
-  </footer>
 
   <script>
     const navToggle = document.getElementById('nav-toggle');
@@ -131,20 +126,24 @@
       siteNav.classList.toggle('show');
     });
 
-    function updateThemeIcons(theme) {
-      const sun = '<path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8L6.76 4.84zM1 13h3v-2H1v2zm10-9h-2v3h2V4zm9.24 2.21l-1.41-1.41-1.8 1.79 1.41 1.41 1.8-1.79zM20 11v2h3v-2h-3zm-9 9h2v-3h-2v3zm7.24-2.21l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zM4.22 17.66l1.8-1.79-1.41-1.41-1.8 1.79 1.41 1.41zM12 8a4 4 0 100 8 4 4 0 000-8z"/>';
-      const moon = '<path d="M21.64 13.64A9 9 0 1110.36 2.36 7 7 0 0021.64 13.64z"/>';
+    function setThemeIcons(theme) {
+      const sunPath = '<path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8L6.76 4.84zM1 13h3v-2H1v2zm10-9h-2v3h2V4zm9.24 2.21l-1.41-1.41-1.8 1.79 1.41 1.41 1.8-1.79zM20 11v2h3v-2h-3zm-9 9h2v-3h-2v3zm7.24-2.21l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zM4.22 17.66l1.8-1.79-1.41-1.41-1.8 1.79 1.41 1.41zM12 8a4 4 0 100 8 4 4 0 000-8z"/>';
+      const moonPath = '<path d="M21.64 13.64A9 9 0 1110.36 2.36 7 7 0 0021.64 13.64z"/>';
 
-      themeIcon.innerHTML = theme === 'dark' ? sun : moon;
+      themeIcon.innerHTML = theme === 'dark' ? sunPath : moonPath;
     }
 
     themeToggle.addEventListener('click', () => {
-      const isDark = document.body.getAttribute('data-theme') === 'dark';
-      const newTheme = isDark ? 'light' : 'dark';
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.body.setAttribute('data-theme', newTheme);
-      updateThemeIcons(newTheme);
+      setThemeIcons(newTheme);
     });
+
+    // Initialize icons on page load
+    setThemeIcons(document.body.getAttribute('data-theme'));
   </script>
 </body>
 </html>
+
 
