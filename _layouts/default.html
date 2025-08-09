@@ -75,10 +75,12 @@
       .site-nav {
         display: none;
         flex-direction: column;
-        background: transparent;
+        background: #fff;  /* solid white background */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
         width: 100%;
         margin-top: 0.5rem;
         border-radius: 0 0 8px 8px;
+        z-index: 200;
       }
       .site-nav.show {
         display: flex;
@@ -86,15 +88,28 @@
       .site-nav a {
         padding: 0.75rem 1rem;
         border-top: 1px solid rgba(0,0,0,0.1);
+        color: #333;
+        background: white;
       }
       .nav-actions {
         order: 1;
+        align-self: flex-end;
       }
       .nav-toggle {
         display: block;
       }
       .icon-btn {
         color: #333;
+      }
+      /* Mobile stacking for header */
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .brand {
+        font-size: 1.75rem;
+        padding: 0.25rem 0;
       }
     }
 
@@ -105,12 +120,13 @@
       }
     }
 
+    /* Remove scroll bar inside main */
     .site-main {
       max-width: 900px;
       margin: 1rem auto;
       padding: 0 1rem;
-      max-height: 90vh;
-      overflow-y: auto;
+      max-height: none; /* removed 90vh limit */
+      overflow-y: visible; /* no scroll */
     }
 
     .site-footer {
@@ -191,5 +207,6 @@
   </script>
 </body>
 </html>
+
 
 
