@@ -15,9 +15,9 @@ description: Home — Vijayshree Jayaraman
     <div class="hero-inner">
       <h1>Vijayshree Jayaraman</h1>
       <p class="lede">
-        Hi, Welcome to my webpage! I am currently a Research Associate at Centre for Advanced Financial Research, Mumbai, India. 
-        Both my undergraduate and masters in economics was from Azim Premji University and my interests include 
-        <strong>applied econometrics, economics of identity, and labour economics</strong>.
+ Hi, Welcome to my webpage! I am currently a Research Associate at <a href="https://www.cafral.org.in/" target="_blank" rel="noopener noreferrer">Centre for Advanced Financial Research, Mumbai, India</a>.<br><br>
+Both my undergraduate and masters in economics was from <a href="https://azimpremjiuniversity.edu.in/" target="_blank" rel="noopener noreferrer">Azim Premji University</a> and my interests include <strong>applied econometrics, economics of identity, and labour economics</strong>.
+
       </p>
     </div>
   </section>
@@ -31,7 +31,7 @@ description: Home — Vijayshree Jayaraman
             It's time for a holistic strategy to foster women's entrepreneurship 
           </a>
         </h4>
-        <img src="/assets/images/article1.jpeg" alt="Article 1 Image" style="max-width:100%;">
+        <img src="/assets/images/article1.jpeg" alt="Article 1 Image" style="max-width:200px; height:auto; border-radius: 8px;">
         <p>
           Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion. 
           We highlight the need for legal empowerment, mentoring, and sector-specific interventions to truly unlock the 
@@ -42,7 +42,7 @@ description: Home — Vijayshree Jayaraman
         <blockquote class="twitter-tweet">
           <p lang="en" dir="ltr">Your tweet text or link here</p>
           &mdash; Your Name (@yourhandle) 
-          <a href="https://twitter.com/yourhandle/status/1234567890">Date</a>
+          <a href="https://x.com/Vijayshreeeee/status/1947974590334152807">Date</a>
         </blockquote>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </article>

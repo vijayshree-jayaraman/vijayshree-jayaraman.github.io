@@ -1,0 +1,4 @@
+- title: Public Goods
+  url: /public-goods/
+- title: Writing
+  url: /writing/
