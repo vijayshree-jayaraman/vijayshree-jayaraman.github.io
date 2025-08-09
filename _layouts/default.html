@@ -309,28 +309,37 @@
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
     
-    // Initialize theme
+    // Initialize theme on every page load
     function initTheme() {
+      // Clear any existing theme classes first
+      body.classList.remove('dark-theme');
+      
       const savedTheme = localStorage.getItem('theme') || 'light';
+      console.log('Initializing theme:', savedTheme); // Debug log
+      
       if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
         themeIcon.textContent = '☀️';
       } else {
-        body.classList.remove('dark-theme');
         themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'light'); // Ensure light is saved
       }
     }
     
     // Toggle theme
     function toggleTheme() {
+      console.log('Theme toggle clicked'); // Debug log
+      
       if (body.classList.contains('dark-theme')) {
         body.classList.remove('dark-theme');
         themeIcon.textContent = '🌙';
         localStorage.setItem('theme', 'light');
+        console.log('Switched to light theme');
       } else {
         body.classList.add('dark-theme');
         themeIcon.textContent = '☀️';
         localStorage.setItem('theme', 'dark');
+        console.log('Switched to dark theme');
       }
     }
     
@@ -389,9 +398,11 @@
       }
     });
     
-    // Initialize theme on page load
+    // Initialize theme immediately when page loads
+    document.addEventListener('DOMContentLoaded', initTheme);
+    
+    // Also initialize right away in case DOMContentLoaded already fired
     initTheme();
   </script>
 </body>
 </html>
-
