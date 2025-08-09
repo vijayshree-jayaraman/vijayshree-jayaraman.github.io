@@ -15,29 +15,77 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
   <style>
+    :root {
+      --accent: #2f6fdb;
+    }
+
     html, body {
       overflow-x: hidden;
       overflow-y: auto;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.5;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* HEADER BASE STYLES */
+    /* Theme Variables */
+    body[data-theme="light"] {
+      --header-bg: #ffffff;
+      --header-text: #333333;
+      --body-bg: #ffffff;
+      --body-text: #333333;
+      --border-color: rgba(0,0,0,0.1);
+      background-color: var(--body-bg);
+      color: var(--body-text);
+    }
+
+    body[data-theme="dark"] {
+      --header-bg: #1a1a1a;
+      --header-text: #f5f5f5;
+      --body-bg: #0d1117;
+      --body-text: #f5f5f5;
+      --border-color: rgba(255,255,255,0.1);
+      background-color: var(--body-bg);
+      color: var(--body-text);
+    }
+
+    /* HEADER STYLES */
     .site-header {
       background: var(--header-bg);
       color: var(--header-text);
-      padding: 1rem;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    .brand {
+      flex: 0 0 auto;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
     .brand {
@@ -45,145 +93,171 @@
       font-size: 1.5rem;
       text-decoration: none;
       color: inherit;
+      transition: color 0.3s ease;
     }
 
-    /* Theme Variables */
-    body[data-theme="light"] {
-      --header-bg: #ffffff;
-      --header-text: #333333;
-    }
-    body[data-theme="dark"] {
-      --header-bg: #1a1a1a;
-      --header-text: #f5f5f5;
+    .brand:hover {
+      opacity: 0.8;
     }
 
-    /* Nav styling */
-    .site-header a:focus,
-    .site-header button:focus {
-      outline: 2px solid #2f6fdb;
-      outline-offset: 2px;
-    }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .site-nav {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .site-nav a {
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      color: inherit;
-    }
     .icon-btn {
       background: transparent;
-      border: none;
-      font-size: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 1.2rem;
       cursor: pointer;
       color: inherit;
+      padding: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
     }
 
-    /* Responsive Nav - hide menu on mobile */
-    @media (max-width: 820px) {
+    .icon-btn:hover {
+      background: var(--border-color);
+      transform: translateY(-1px);
+    }
+
+    .icon-btn:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* Navigation styles */
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      color: inherit;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .site-nav a:hover {
+      color: var(--accent);
+    }
+
+    .site-nav a:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* Mobile Navigation */
+    .nav-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
       .site-nav {
         display: none;
-        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: var(--header-bg);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+        border-top: 1px solid var(--border-color);
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        width: 100%;
-        margin-top: 0.5rem;
-        border-radius: 0 0 8px 8px;
-        z-index: 200;
       }
+
       .site-nav.show {
         display: flex;
       }
+
       .site-nav a {
-        padding: 0.75rem 1rem;
-        border-top: 1px solid rgba(0,0,0,0.1);
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-color);
+        width: 100%;
       }
-      .nav-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
+
+      .site-nav a:last-child {
+        border-bottom: none;
       }
-      .brand-theme {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-    }
-    @media (min-width: 821px) {
-      .nav-toggle {
-        display: none;
-      }
-      .brand-theme {
-        display: flex;
-        align-items: center;
+
+      .nav-actions {
         gap: 0.5rem;
       }
     }
 
+    /* Main content */
     .site-main {
       max-width: 900px;
-      margin: 1rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
+      min-height: calc(100vh - 200px);
     }
 
+    /* Footer */
     .site-footer {
-      background: #f5f5f5;
+      background: var(--header-bg);
+      color: var(--header-text);
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #555;
       margin-top: 3rem;
+      border-top: 1px solid var(--border-color);
     }
-    body[data-theme="dark"] .site-footer {
-      background: #111;
-      color: #ccc;
-    }
+
     .site-footer a {
-      color: var(--accent, #2f6fdb);
+      color: var(--accent);
       text-decoration: none;
       margin: 0 0.5rem;
+      transition: opacity 0.3s ease;
     }
 
-    /* Mobile card stacking */
+    .site-footer a:hover {
+      opacity: 0.8;
+    }
+
+    /* Card responsiveness fix */
     @media (max-width: 600px) {
       article.card {
         display: flex !important;
         flex-direction: column !important;
         max-width: 100% !important;
       }
+      
       article.card > div {
         flex: none !important;
         min-width: 100% !important;
       }
+      
       article.card > div img {
         max-width: 100% !important;
         height: auto !important;
         border-radius: 8px;
       }
     }
+
+    /* Smooth transitions for theme changes only */
+    .site-header,
+    .site-footer,
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease !important;
+    }
   </style>
 </head>
 <body data-theme="light">
   <header class="site-header">
-    <div class="container nav-container">
-      <div class="brand-theme">
-        <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
-      </div>
+    <div class="nav-container">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
       <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary Navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
@@ -192,7 +266,12 @@
       </nav>
 
       <div class="nav-actions">
-        <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu">☰</button>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" title="Menu">
+          <span>☰</span>
+        </button>
       </div>
     </div>
   </header>
@@ -214,20 +293,85 @@
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <script>
+    // Enhanced theme toggle with immediate visual updates
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+    
+    // Initialize theme from localStorage or default to light
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      setTheme(savedTheme);
+    }
+    
+    function setTheme(theme) {
+      // Force immediate update
+      body.setAttribute('data-theme', theme);
+      body.style.setProperty('--header-bg', theme === 'light' ? '#ffffff' : '#1a1a1a');
+      body.style.setProperty('--header-text', theme === 'light' ? '#333333' : '#f5f5f5');
+      body.style.setProperty('--body-bg', theme === 'light' ? '#ffffff' : '#0d1117');
+      body.style.setProperty('--body-text', theme === 'light' ? '#333333' : '#f5f5f5');
+      body.style.setProperty('--border-color', theme === 'light' ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.1)');
+      
+      // Force repaint
+      body.style.backgroundColor = theme === 'light' ? '#ffffff' : '#0d1117';
+      body.style.color = theme === 'light' ? '#333333' : '#f5f5f5';
+      
+      themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+      localStorage.setItem('theme', theme);
+      
+      // Trigger reflow to ensure changes apply immediately
+      body.offsetHeight;
+    }
+    
+    function toggleTheme() {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+    }
+    
+    // Enhanced mobile navigation
     const navToggle = document.getElementById('nav-toggle');
     const siteNav = document.getElementById('site-nav');
-    const themeToggle = document.getElementById('theme-toggle');
-    navToggle.addEventListener('click', () => {
+    
+    function toggleNav() {
       siteNav.classList.toggle('show');
+      const isOpen = siteNav.classList.contains('show');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    }
+    
+    function closeNav() {
+      siteNav.classList.remove('show');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    
+    // Event listeners
+    themeToggle.addEventListener('click', toggleTheme);
+    navToggle.addEventListener('click', toggleNav);
+    
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.site-header')) {
+        closeNav();
+      }
     });
-    themeToggle.addEventListener('click', () => {
-      const body = document.body;
-      const currentTheme = body.getAttribute('data-theme');
-      body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    
+    // Close mobile nav when pressing Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeNav();
+      }
     });
+    
+    // Close mobile nav when clicking nav links
+    siteNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
+    
+    // Initialize theme on page load
+    initTheme();
   </script>
 </body>
 </html>
-
 
 
