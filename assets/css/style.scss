@@ -1,0 +1,54 @@
+/* Simple SCSS -> will be output as CSS by Jekyll if you use the gem-based pipeline */
+$max-width: 980px;
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  color: #1f2933;
+  background: #fbfcfd;
+  line-height: 1.6;
+  margin: 0;
+}
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.site-header {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  border-bottom: 1px solid #eef2f6;
+}
+.site-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.site-title a { text-decoration: none; color: inherit; }
+.site-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #3b4a54;
+}
+.cards .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(45,55,72,0.06);
+}
+.card h4 { margin-top: 0; }
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid #eef2f6;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* Mobile-specific tweaks */
+@media (max-width: 600px) {
+  .container { padding: 1rem; }
+  .site-title { font-size: 1.1rem; }
+  .site-nav { margin-top: 0.5rem; }
+}
