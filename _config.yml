@@ -1,15 +1,14 @@
 title: "Vijayshree Jayaraman"
-email: "your@email.com"
-description: "Research | Data | Writing"
-baseurl: "" 
+description: "Personal website"
+baseurl: ""
 url: "https://vijayshree-jayaraman.github.io"
-theme: null
+
+theme: minima
 plugins:
   - jekyll-feed
-markdown: kramdown
 
-# Navigation - order and pages
-navigation:
+# Navigation
+nav_pages:
   - title: "Home"
     url: /
   - title: "About"
@@ -20,8 +19,3 @@ navigation:
     url: /data/
   - title: "CV"
     url: /cv/
-
-author:
-  name: "Vijayshree Jayaraman"
-  affiliation: "Research Associate"
-  email: "your@email.com"
