@@ -53,7 +53,7 @@ permalink: /writing/
     <h2>Substack</h2>
     <div class="card-grid">
       <article class="card">
-        <h4><a href="https://substack.com/@vijayshreejayaraman" target="_blank">Newsletter</a></h4>
+        <h4><a href="https://substack.com/@vijayshreejayaraman" target="_blank">Substack - Working Papers</a></h4>
         <p>I like writing, economics and data - trying something new with all of new here !.</p>
       </article>
     </div>
