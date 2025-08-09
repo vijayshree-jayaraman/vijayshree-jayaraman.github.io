@@ -121,6 +121,23 @@
       margin: 0 0.5rem;
     }
 
+    /* === MOBILE STACKING FOR ARTICLE CARDS === */
+    @media (max-width: 600px) {
+      article.card {
+        display: flex !important;
+        flex-direction: column !important;
+        max-width: 100% !important;
+      }
+      article.card > div {
+        flex: none !important;
+        min-width: 100% !important;
+      }
+      article.card > div img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+      }
+    }
   </style>
 </head>
 <body data-theme="light">
@@ -167,3 +184,4 @@
   </script>
 </body>
 </html>
+
