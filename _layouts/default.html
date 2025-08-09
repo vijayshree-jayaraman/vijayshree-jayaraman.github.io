@@ -349,9 +349,31 @@
       navToggle.setAttribute('aria-expanded', 'false');
     }
     
-    // Event listeners
-    themeToggle.addEventListener('click', toggleTheme);
-    navToggle.addEventListener('click', toggleNav);
+    // Event listeners with proper event handling
+    themeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleTheme();
+    });
+    
+    navToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleNav();
+    });
+    
+    // Prevent navigation links from triggering any parent events
+    siteNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeNav();
+      });
+    });
+    
+    // Prevent brand link from triggering events
+    document.querySelector('.brand').addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
     
     // Close mobile nav when clicking outside
     document.addEventListener('click', (e) => {
@@ -367,15 +389,9 @@
       }
     });
     
-    // Close mobile nav when clicking nav links
-    siteNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeNav);
-    });
-    
     // Initialize theme on page load
     initTheme();
   </script>
 </body>
 </html>
-
 
