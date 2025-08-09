@@ -23,12 +23,16 @@
       line-height: 1.5;
     }
     .site-header {
-      background: var(--accent, #2f6fdb);
-      color: white;
+      background: transparent;
+      color: #333;
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 100;
+    }
+    .site-header a.brand,
+    .site-nav a {
+      color: #333;
     }
     .nav-container {
       display: flex;
@@ -43,7 +47,6 @@
       font-weight: 700;
       font-size: 1.5rem;
       text-decoration: none;
-      color: white;
     }
     .site-nav {
       display: flex;
@@ -51,7 +54,6 @@
       flex-wrap: wrap;
     }
     .site-nav a {
-      color: white;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -63,7 +65,7 @@
     .icon-btn {
       background: transparent;
       border: none;
-      color: white;
+      color: #333;
       font-size: 1.5rem;
       cursor: pointer;
     }
@@ -73,7 +75,7 @@
       .site-nav {
         display: none;
         flex-direction: column;
-        background: var(--accent, #2f6fdb);
+        background: transparent;
         width: 100%;
         margin-top: 0.5rem;
         border-radius: 0 0 8px 8px;
@@ -83,13 +85,16 @@
       }
       .site-nav a {
         padding: 0.75rem 1rem;
-        border-top: 1px solid rgba(255,255,255,0.2);
+        border-top: 1px solid rgba(0,0,0,0.1);
       }
       .nav-actions {
         order: 1;
       }
       .nav-toggle {
         display: block;
+      }
+      .icon-btn {
+        color: #333;
       }
     }
 
@@ -102,8 +107,10 @@
 
     .site-main {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: 1rem auto;
       padding: 0 1rem;
+      max-height: 90vh;
+      overflow-y: auto;
     }
 
     .site-footer {
@@ -184,4 +191,5 @@
   </script>
 </body>
 </html>
+
 
