@@ -22,14 +22,23 @@
       padding: 0;
       line-height: 1.5;
     }
+    /* HEADER */
     .site-header {
-      background: transparent;
+      background: #fff !important;
       color: #333;
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+    /* Accessible focus styles */
+    .site-header a:focus,
+    .site-header button:focus {
+      outline: 2px solid #2f6fdb;
+      outline-offset: 2px;
+    }
+
     .site-header a.brand,
     .site-nav a {
       color: #333;
@@ -76,7 +85,7 @@
         display: none;
         flex-direction: column;
         background: #fff;  /* solid white background */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         width: 100%;
         margin-top: 0.5rem;
         border-radius: 0 0 8px 8px;
@@ -104,12 +113,27 @@
       /* Mobile stacking for header */
       .nav-container {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      .nav-container > * {
+        flex: none;
+        width: 100%;
       }
       .brand {
         font-size: 1.75rem;
-        padding: 0.25rem 0;
+        padding: 0;
+        margin: 0;
+      }
+      .nav-actions {
+        align-self: flex-end;
+      }
+      .site-nav {
+        margin-top: 0;
       }
     }
 
@@ -207,6 +231,7 @@
   </script>
 </body>
 </html>
+
 
 
 
