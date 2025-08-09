@@ -54,7 +54,7 @@ permalink: /writing/
     <div class="card-grid">
       <article class="card">
         <h4><a href="https://substack.com/@vijayshreejayaraman" target="_blank">Substack - Working Papers</a></h4>
-        <p>I like writing, economics and data - trying something new with all of new here !.</p>
+        <p>I like writing, economics and data - trying something new with all of that here !</p>
       </article>
     </div>
   </section>
