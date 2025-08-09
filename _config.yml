@@ -1,0 +1,27 @@
+title: "Vijayshree Jayaraman"
+email: "your@email.com"
+description: "Research | Data | Writing"
+baseurl: "" 
+url: "https://vijayshree-jayaraman.github.io"
+theme: null
+plugins:
+  - jekyll-feed
+markdown: kramdown
+
+# Navigation - order and pages
+navigation:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Writing"
+    url: /writing/
+  - title: "Data"
+    url: /data/
+  - title: "CV"
+    url: /cv/
+
+author:
+  name: "Vijayshree Jayaraman"
+  affiliation: "Research Associate"
+  email: "your@email.com"

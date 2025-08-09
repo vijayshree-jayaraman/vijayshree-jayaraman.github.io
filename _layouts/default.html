@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="/">{{ site.title }}</a>
+      <nav class="site-nav">
+        {% for item in site.navigation %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <img src="/assets/img/profile.jpg" alt="profile" class="profile">
+      <h3>{{ site.author.name }}</h3>
+      <p class="aff">{{ site.author.affiliation }}</p>
+      <a class="cv-btn" href="/assets/cv.pdf" target="_blank">Download CV</a>
+      <nav class="side-links">
+        {% for item in site.navigation %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </aside>
+
+    <section class="content">
+      {{ content }}
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© {{ site.time | date: '%Y' }} {{ site.author.name }} · Built with ♥</small>
+    </div>
+  </footer>
+</body>
+</html>
