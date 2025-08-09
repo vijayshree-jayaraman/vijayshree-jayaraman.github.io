@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Data
-permalink: /data/
+title: Public Goods
+permalink: /public-goods/
 ---
 
 <div class="container">
