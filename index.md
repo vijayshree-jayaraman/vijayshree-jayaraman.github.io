@@ -5,13 +5,20 @@ description: Home — Vijayshree Jayaraman
 ---
 
 <div class="container">
-  <section class="hero">
+  <section class="hero" style="display: flex; align-items: center; gap: 20px;">
+    <!-- Image on the left -->
+    <div>
+      <img src="/assets/images/profile.jpeg" alt="Vijayshree Jayaraman" style="max-width:200px; height:auto; border-radius: 8px;">
+    </div>
+
+    <!-- Text on the right -->
     <div class="hero-inner">
-      <h1>Your Name — Vijayshree Jayaraman</h1>
-      <p class="lede">Economist · Research Associate · Data-focused writer. Short tagline describing your focus and voice.</p>
-  <p>
-  <img src="/assets/images/profile.jpeg" alt="Vijayshree Jayaraman" style="max-width:200px; border-radius: 50%;">
-</p>
+      <h1>Vijayshree Jayaraman</h1>
+      <p class="lede">
+        Hi, Welcome to my webpage! I am currently a Research Associate at Centre for Advanced Financial Research, Mumbai, India. 
+        Both my undergraduate and masters in economics was from Azim Premji University and my interests include 
+        <strong>applied econometrics, economics of identity, and labour economics</strong>.
+      </p>
     </div>
   </section>
 
