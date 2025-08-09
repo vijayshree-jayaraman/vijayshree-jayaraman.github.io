@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
-  <meta name="description" content="{{ site.description }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
+  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
 </head>
-<body>
+<body data-theme="light">
   <header class="site-header">
-    <div class="nav-container">
-      <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
-      <nav id="nav-links" class="nav-links">
+    <div class="container nav-container">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+      <nav id="site-nav" class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ '/writing/' | relative_url }}">Writing</a>
         <a href="{{ '/data/' | relative_url }}">Data</a>
         <a href="{{ '/cv/' | relative_url }}">CV</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">☰</button>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle dark mode">🌙</button>
+        <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
     </div>
   </header>
 
@@ -34,10 +40,11 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© {{ site.title }} — <a href="https://jekyllrb.com">Jekyll</a></p>
+    <div class="container footer-inner">
+      <p>© {{ site.title }} · <a href="https://github.com/vijayshree-jayaraman">GitHub</a> · <a href="https://twitter.com/">Twitter</a></p>
     </div>
   </footer>
+
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

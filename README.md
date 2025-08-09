@@ -1,9 +1,11 @@
-# Personal Jekyll Website
+# Vijayshree Jayaraman — Personal Jekyll Site
 
-Replace placeholder content with your own. To run locally:
+This folder contains a production-ready Jekyll site (Al-Folio inspired) with dark-mode toggle and top navigation.
 
-1. Install Ruby + Bundler
-2. `bundle install`
-3. `bundle exec jekyll serve`
+## Quick start (locally)
 
-Open http://127.0.0.1:4000
+1. Install Ruby & Bundler.
+2. From this directory:
+   ```bash
+   bundle install
+   bundle exec jekyll serve
