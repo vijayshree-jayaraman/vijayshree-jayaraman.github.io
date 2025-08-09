@@ -26,16 +26,25 @@ description: Home — Vijayshree Jayaraman
     <h2>Recent Writing</h2>
     <div class="card-grid">
       <article class="card">
-        <h4>Essay: Institutions and Development</h4>
-        <p>Short excerpt that teases the piece and invites a click.</p>
-      </article>
-      <article class="card">
-        <h4>Feature: Urban Labour Markets</h4>
-        <p>Short excerpt that teases the piece and invites a click.</p>
-      </article>
-      <article class="card">
-        <h4>Review: Education Policy</h4>
-        <p>Short excerpt that teases the piece and invites a click.</p>
+        <h4>
+          <a href="https://www.livemint.com/opinion/online-views/women-entrepreneurship-empowerment-labour-force-participation-economic-census-mudra-yojana-pmjdy-businesswomen-11753091186409.html" target="_blank">
+            It's time for a holistic strategy to foster women's entrepreneurship 
+          </a>
+        </h4>
+        <img src="/assets/images/article1.jpeg" alt="Article 1 Image" style="max-width:100%;">
+        <p>
+          Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion. 
+          We highlight the need for legal empowerment, mentoring, and sector-specific interventions to truly unlock the 
+          potential of women entrepreneurs in India.
+        </p>
+
+        <!-- Twitter Thread Embed -->
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">Your tweet text or link here</p>
+          &mdash; Your Name (@yourhandle) 
+          <a href="https://twitter.com/yourhandle/status/1234567890">Date</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </article>
     </div>
   </section>
@@ -43,14 +52,10 @@ description: Home — Vijayshree Jayaraman
   <section class="section">
     <h2>Featured Data</h2>
     <div class="card-grid">
-      <article class="card">
-        <h4>MGNREGS Cleaned</h4>
-        <p>Repository with cleaned data and code for analysis.</p>
-      </article>
-      <article class="card">
-        <h4>District Maps</h4>
-        <p>Geospatial files and scripts to reproduce maps.</p>
-      </article>
+   <article class="card">
+      <h4>ASUSE Cross Sections</h4>
+      <p>Annual Survey of Unincorporated Sector Enterprises — cleaned data and scripts.</p>
+    </article>
     </div>
   </section>
 </div>

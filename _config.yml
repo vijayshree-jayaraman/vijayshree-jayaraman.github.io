@@ -1,6 +1,6 @@
 title: "Vijayshree Jayaraman"
 email: you@example.com
-description: "Economist · Research Associate · Writer — portfolio site"
+description: " portfolio site"
 baseurl: "" 
 url: "" 
 markdown: kramdown
@@ -9,3 +9,7 @@ plugins:
   - jekyll-feed
 sass:
   style: compressed
+
+header_pages:
+  - public goods.md
+  - writing.md
