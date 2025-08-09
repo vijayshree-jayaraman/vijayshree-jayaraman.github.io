@@ -15,6 +15,14 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
   <style>
+    /* Remove scrolling from entire page */
+    html, body {
+      overflow: hidden;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     /* Mobile Friendly CSS */
     body {
       font-family: 'Inter', sans-serif;

@@ -4,6 +4,30 @@ title: Home
 description: Home — Vijayshree Jayaraman
 ---
 
+<style>
+  /* Hero section stacking on mobile */
+  @media (max-width: 600px) {
+    .hero {
+      flex-direction: column !important;
+      gap: 1rem !important;
+      align-items: flex-start; /* better alignment for stacked */
+    }
+    .hero > div {
+      min-width: 100% !important;
+    }
+    .hero img {
+      max-width: 100% !important;
+      height: auto !important;
+      border-radius: 8px;
+    }
+  }
+
+  /* Optional: add some spacing below h1 in hero */
+  .hero-inner h1 {
+    margin-bottom: 0.5rem;
+  }
+</style>
+
 <div class="container">
   <section class="hero" style="display: flex; align-items: center; gap: 20px;">
     <!-- Image on the left -->
@@ -24,33 +48,33 @@ description: Home — Vijayshree Jayaraman
     </div>
   </section>
 
-<section class="section">
-  <h2>Recent Writing</h2>
-  <div class="card-grid" style="display: flex; gap: 20px; align-items: flex-start;">
-    <article class="card" style="flex: 1; display: flex; gap: 20px;">
-      <div style="flex-shrink: 0;">
-        <img src="/assets/images/article1.jpeg" alt="Article 1 Image" style="max-width:200px; height:auto; border-radius: 8px;">
-      </div>
-      <div style="flex-grow: 1;">
-        <h4>
-          <a href="https://www.livemint.com/opinion/online-views/women-entrepreneurship-empowerment-labour-force-participation-economic-census-mudra-yojana-pmjdy-businesswomen-11753091186409.html" target="_blank" rel="noopener noreferrer">
-            It's time for a holistic strategy to foster women's entrepreneurship 
-          </a>
-        </h4>
-        <p>
-          Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion. 
-          We highlight the need for legal empowerment, mentoring, and sector-specific interventions to truly unlock the 
-          potential of women entrepreneurs in India.
-        </p>
+  <section class="section">
+    <h2>Recent Writing</h2>
+    <div class="card-grid" style="display: flex; gap: 20px; align-items: flex-start;">
+      <article class="card" style="flex: 1; display: flex; gap: 20px;">
+        <div style="flex-shrink: 0;">
+          <img src="/assets/images/article1.jpeg" alt="Article 1 Image" style="max-width:200px; height:auto; border-radius: 8px;">
+        </div>
+        <div style="flex-grow: 1;">
+          <h4>
+            <a href="https://www.livemint.com/opinion/online-views/women-entrepreneurship-empowerment-labour-force-participation-economic-census-mudra-yojana-pmjdy-businesswomen-11753091186409.html" target="_blank" rel="noopener noreferrer">
+              It's time for a holistic strategy to foster women's entrepreneurship 
+            </a>
+          </h4>
+          <p>
+            Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion. 
+            We highlight the need for legal empowerment, mentoring, and sector-specific interventions to truly unlock the 
+            potential of women entrepreneurs in India.
+          </p>
 
-        <!-- Simple Thread link -->
-        <p>
-          <a href="https://x.com/Vijayshreeeee/status/1947974590334152807" target="_blank" rel="noopener noreferrer">Thread</a>
-        </p>
-      </div>
-    </article>
-  </div>
-</section>
+          <!-- Simple Thread link -->
+          <p>
+            <a href="https://x.com/Vijayshreeeee/status/1947974590334152807" target="_blank" rel="noopener noreferrer">Thread</a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <section class="section">
     <h2>Recent Repository</h2>
