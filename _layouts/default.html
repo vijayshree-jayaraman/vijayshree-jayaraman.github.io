@@ -15,20 +15,21 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
   <style>
-    /* Remove scrolling from entire page */
-   html, body {
-  overflow-x: hidden; /* removes horizontal scroll only */
-  overflow-y: auto;   /* allows vertical scroll */
-  margin: 0;
-  padding: 0;
-}
+    /* Allow vertical scroll, block horizontal */
+    html, body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+
     /* Mobile Friendly CSS */
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
       line-height: 1.5;
     }
+
     /* HEADER */
     .site-header {
       background: #fff !important;
@@ -39,6 +40,7 @@
       z-index: 100;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
     /* Accessible focus styles */
     .site-header a:focus,
     .site-header button:focus {
@@ -50,6 +52,7 @@
     .site-nav a {
       color: #333;
     }
+
     .nav-container {
       display: flex;
       justify-content: space-between;
@@ -59,25 +62,30 @@
       flex-wrap: wrap;
       gap: 0.5rem;
     }
+
     .brand {
       font-weight: 700;
       font-size: 1.5rem;
       text-decoration: none;
     }
+
     .site-nav {
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
     }
+
     .site-nav a {
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
     }
+
     .nav-actions {
       display: flex;
       gap: 0.5rem;
     }
+
     .icon-btn {
       background: transparent;
       border: none;
@@ -91,7 +99,7 @@
       .site-nav {
         display: none;
         flex-direction: column;
-        background: #fff;  /* solid white background */
+        background: #fff;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         width: 100%;
         margin-top: 0.5rem;
@@ -104,7 +112,6 @@
       .site-nav a {
         padding: 0.75rem 1rem;
         border-top: 1px solid rgba(0,0,0,0.1);
-        color: #333;
         background: white;
       }
       .nav-actions {
@@ -114,10 +121,6 @@
       .nav-toggle {
         display: block;
       }
-      .icon-btn {
-        color: #333;
-      }
-      /* Mobile stacking for header */
       .nav-container {
         flex-direction: column;
         align-items: stretch;
@@ -133,14 +136,7 @@
       }
       .brand {
         font-size: 1.75rem;
-        padding: 0;
         margin: 0;
-      }
-      .nav-actions {
-        align-self: flex-end;
-      }
-      .site-nav {
-        margin-top: 0;
       }
     }
 
@@ -151,13 +147,11 @@
       }
     }
 
-    /* Remove scroll bar inside main */
+    /* Main content area - let it grow naturally */
     .site-main {
       max-width: 900px;
       margin: 1rem auto;
       padding: 0 1rem;
-      max-height: none; /* removed 90vh limit */
-      overflow-y: visible; /* no scroll */
     }
 
     .site-footer {
@@ -175,7 +169,7 @@
       margin: 0 0.5rem;
     }
 
-    /* === MOBILE STACKING FOR ARTICLE CARDS === */
+    /* Mobile stacking for article cards */
     @media (max-width: 600px) {
       article.card {
         display: flex !important;
@@ -183,7 +177,6 @@
         max-width: 100% !important;
       }
       article.card > div {
-        flex: none !important;
         min-width: 100% !important;
       }
       article.card > div img {
@@ -198,13 +191,11 @@
   <header class="site-header">
     <div class="container nav-container">
       <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-
-      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary Navigation">
+      <nav id="site-nav" class="site-nav" role="navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/public-goods/' | relative_url }}">Public Goods</a>
         <a href="{{ '/writing/' | relative_url }}">Writing</a>
       </nav>
-
       <div class="nav-actions">
         <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
         <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu">☰</button>
@@ -220,16 +211,15 @@
     <div class="container footer-inner">
       <p>
         © {{ site.title }} · 
-        <a href="https://github.com/vijayshree-jayaraman" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-        <a href="https://x.com/Vijayshreeeee" target="_blank" rel="noopener noreferrer">Twitter</a> ·
-        <a href="https://www.linkedin.com/in/jvijayshree/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/vijayshree-jayaraman" target="_blank">GitHub</a> ·
+        <a href="https://x.com/Vijayshreeeee" target="_blank">Twitter</a> ·
+        <a href="https://www.linkedin.com/in/jvijayshree" target="_blank">LinkedIn</a>
       </p>
     </div>
   </footer>
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <script>
-    // Nav toggle JS (in case main.js isn't loaded or to reinforce)
     const navToggle = document.getElementById('nav-toggle');
     const siteNav = document.getElementById('site-nav');
     navToggle.addEventListener('click', () => {
