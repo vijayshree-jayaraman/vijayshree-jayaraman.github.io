@@ -4,13 +4,15 @@ title: Data
 permalink: /data/
 ---
 
-## Data
-
-Clean table linking to GitHub repositories and datasets.
-
-| Dataset | Description | Link |
-|--------:|-------------|:-----|
-| Example Repo | Code and data for Project A | [GitHub](https://github.com/yourusername/project-a) |
-| Example Dataset | Cleaned CSV and README | [GitHub](https://github.com/yourusername/dataset) |
-
-Replace the rows with your actual repos. The table is Markdown and will render responsively.
+<div class="container">
+  <section class="section">
+    <h2>Datasets & Repos</h2>
+    <table class="table">
+      <thead><tr><th>Dataset</th><th>Description</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>MGNREGS Cleaned</td><td>Workflows and cleaned CSVs for Tamil Nadu.</td><td><a href="https://github.com/">GitHub</a></td></tr>
+        <tr><td>District Shapefiles</td><td>GeoJSON and scripts to reproduce figures.</td><td><a href="https://github.com/">GitHub</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>

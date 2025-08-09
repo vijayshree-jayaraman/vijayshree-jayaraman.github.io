@@ -2,36 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- EB Garamond from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      <nav class="site-nav">
+    <div class="nav-container">
+      <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
+      <nav id="nav-links" class="nav-links">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ '/writing/' | relative_url }}">Writing</a>
         <a href="{{ '/data/' | relative_url }}">Data</a>
         <a href="{{ '/cv/' | relative_url }}">CV</a>
       </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">☰</button>
     </div>
   </header>
 
-  <main class="container">
+  <main class="site-main">
     {{ content }}
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© {{ site.title }} · Built with Jekyll</p>
+      <p>© {{ site.title }} — <a href="https://jekyllrb.com">Jekyll</a></p>
     </div>
   </footer>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
