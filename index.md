@@ -71,11 +71,7 @@ description: Home — Vijayshree Jayaraman
           This paper examines the causal effect of electing a female Gram Panchayat (GP) president on public 
           employment provision under the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS). 
         </p>
-
-        <!-- Optional Thread link (remove if not needed) -->
-        <p>
-          <a href="#" target="_blank" rel="noopener noreferrer">Thread (optional)</a>
-        </p>
+        
       </div>
 
     </article>
