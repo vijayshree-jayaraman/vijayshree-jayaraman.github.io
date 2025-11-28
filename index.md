@@ -48,33 +48,41 @@ description: Home — Vijayshree Jayaraman
     </div>
   </section>
 
-  <section class="section">
-    <h2>Recent Writing</h2>
-    <div class="card-grid" style="display: flex; gap: 20px; align-items: flex-start;">
-      <article class="card" style="flex: 1; display: flex; gap: 20px;">
-        <div style="flex-shrink: 0;">
-          <img src="/assets/images/article1.jpeg" alt="Article 1 Image" style="max-width:200px; height:auto; border-radius: 8px;">
-        </div>
-        <div style="flex-grow: 1;">
-          <h4>
-            <a href="https://www.livemint.com/opinion/online-views/women-entrepreneurship-empowerment-labour-force-participation-economic-census-mudra-yojana-pmjdy-businesswomen-11753091186409.html" target="_blank" rel="noopener noreferrer">
-              It's time for a holistic strategy to foster women's entrepreneurship 
-            </a>
-          </h4>
-          <p>
-            Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion. 
-            We highlight the need for legal empowerment, mentoring, and sector-specific interventions to truly unlock the 
-            potential of women entrepreneurs in India.
-          </p>
+<section class="section">
+  <h2>Recent Writing</h2>
+  <div class="card-grid" style="display: flex; gap: 20px; align-items: flex-start;">
+    
+    <article class="card" style="flex: 1; display: flex; gap: 20px;">
+      
+      <!-- Replace this image with the one you want -->
+      <div style="flex-shrink: 0;">
+        <img src="/assets/images/mgnregs.png" alt="MGNREGS Article Image" 
+             style="max-width:200px; height:auto; border-radius: 8px;">
+      </div>
 
-          <!-- Simple Thread link -->
-          <p>
-            <a href="https://x.com/Vijayshreeeee/status/1947974590334152807" target="_blank" rel="noopener noreferrer">Thread</a>
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
+      <div style="flex-grow: 1;">
+        <h4>
+          <a href="https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&dl=0" 
+             target="_blank" rel="noopener noreferrer">
+            Is Gender Parity Costly? Evidence from Rural Local Body Elections
+          </a>
+        </h4>
+        <p>
+          This paper examines the causal effect of electing a female Gram Panchayat (GP) president on public 
+          employment provision under the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS). 
+        </p>
+
+        <!-- Optional Thread link (remove if not needed) -->
+        <p>
+          <a href="#" target="_blank" rel="noopener noreferrer">Thread (optional)</a>
+        </p>
+      </div>
+
+    </article>
+  
+  </div>
+</section>
+
 
   <section class="section">
     <h2>Recent Repository</h2>
