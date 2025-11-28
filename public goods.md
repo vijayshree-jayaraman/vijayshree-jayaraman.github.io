@@ -4,10 +4,11 @@ title: Public Goods
 permalink: /public-goods/
 ---
 
-<div class="container">
-  <section class="section">
+<div class="container mt-5">
+  <section>
     <h2>Datasets & Repos</h2>
-    <table class="table">
+
+    <table class="table table-striped mt-3">
       <thead>
         <tr>
           <th>Dataset</th>
@@ -17,22 +18,22 @@ permalink: /public-goods/
       </thead>
       <tbody>
         <tr>
-          <td>TNEC-GP-Elections-2019</td>
+          <td><strong>TNEC-GP-Elections-2019</strong></td>
           <td>Data and scripts related to Tamil Nadu Gram Panchayat Elections 2019.</td>
           <td><a href="https://github.com/vijayshree-jayaraman/TNEC-GP-Elections-2019" target="_blank">GitHub</a></td>
         </tr>
         <tr>
-          <td>District-mapping-2001-2011-with-LGD-codes</td>
+          <td><strong>District-mapping-2001-2011-with-LGD-codes</strong></td>
           <td>District boundary mapping for 2001–2011 census years with LGD codes.</td>
           <td><a href="https://github.com/vijayshree-jayaraman/District-mapping-2001-2011-with-LGD-codes" target="_blank">GitHub</a></td>
         </tr>
         <tr>
-          <td>ASUSE</td>
+          <td><strong>ASUSE</strong></td>
           <td>Annual Unincorporated Enterprises Survey — data dump cleaned.</td>
           <td><a href="https://github.com/advaitmoharir/ASUSE" target="_blank">GitHub</a></td>
         </tr>
         <tr>
-          <td>HCES 2022-23</td>
+          <td><strong>HCES 2022-23</strong></td>
           <td>Household Consumption Expenditure Survey — data dump cleaned.</td>
           <td><a href="https://github.com/advaitmoharir/hces_2023" target="_blank">GitHub</a></td>
         </tr>
@@ -40,3 +41,4 @@ permalink: /public-goods/
     </table>
   </section>
 </div>
+
