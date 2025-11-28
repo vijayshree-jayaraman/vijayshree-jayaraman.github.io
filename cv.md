@@ -1,10 +1,14 @@
 ---
-layout: default
-title: CV
+layout: none
 permalink: /cv/
 ---
 
-<script>
-  // Immediately redirect to the PDF, letting the browser display it full-screen
-  window.location.href = "/assets/files/Vijayshree_Jayaraman_CV.pdf";
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0; url=/assets/files/Vijayshree_Jayaraman_CV.pdf" />
+</head>
+<body>
+  <p>Redirecting to CV…</p>
+</body>
+</html>
