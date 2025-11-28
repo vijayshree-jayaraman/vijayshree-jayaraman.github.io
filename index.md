@@ -43,7 +43,7 @@ description: Home — Vijayshree Jayaraman
         <a href="https://www.cafral.org.in/" target="_blank" rel="noopener noreferrer">Centre for Advanced Financial Research, Mumbai, India</a>.<br><br>
         Both my undergraduate and masters in economics was from 
         <a href="https://azimpremjiuniversity.edu.in/" target="_blank" rel="noopener noreferrer">Azim Premji University</a> and my interests include 
-        <strong>applied econometrics, economics of identity, and labour economics</strong>.
+        <strong>applied econometrics, development finance, and labour economics</strong>.
       </p>
     </div>
   </section>
