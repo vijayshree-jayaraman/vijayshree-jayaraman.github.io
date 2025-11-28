@@ -40,7 +40,7 @@ permalink: /writing/
 <section class="section">
   <h2>Academic</h2>
 
-  <div class="card-grid">
+  <div class="card-grid" style="margin-bottom: 20px;">
     <article class="card">
       <h4>
         <a href="https://azimpremjiuniversity.edu.in/publications/2023/cse-working-paper-series/the-unhappy-marriage-of-womens-work-and-spousal-violence-in-india" target="_blank">
@@ -53,7 +53,7 @@ permalink: /writing/
     </article>
   </div>
 
-  <div class="card-grid">
+  <div class="card-grid" style="margin-bottom: 20px;">
     <article class="card">
       <h4>
         <a href="https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&dl=0" target="_blank">
@@ -68,6 +68,7 @@ permalink: /writing/
     </article>
   </div>
 </section>
+
 
 
   <!-- Substack -->
