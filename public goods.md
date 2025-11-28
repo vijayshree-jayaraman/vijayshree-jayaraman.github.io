@@ -31,6 +31,11 @@ permalink: /public-goods/
           <td>Annual Unincorporated Enterprises Survey — data dump cleaned.</td>
           <td><a href="https://github.com/advaitmoharir/ASUSE" target="_blank">GitHub</a></td>
         </tr>
+        <tr>
+          <td>HCES 2022-23</td>
+          <td>Household Consumption Expenditure Survey — data dump cleaned.</td>
+          <td><a href="https://github.com/advaitmoharir/hces_2023" target="_blank">GitHub</a></td>
+        </tr>
       </tbody>
     </table>
   </section>
