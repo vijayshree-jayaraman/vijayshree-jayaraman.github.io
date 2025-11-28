@@ -48,6 +48,17 @@ permalink: /writing/
     </div>
   </section>
 
+   <div class="card-grid">
+      <article class="card">
+        <h4><a href="https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&st=umsdt4ed&dl=0" target="_blank">
+        Is Gender Parity Costly?:Evidence from Rural Local Body Elections</a></h4>
+        <p>This paper examines the causal effect of electing a female Gram Panchayat (GP)
+president on public employment provision under the Mahatma Gandhi National Ru-
+ral Employment Guarantee Scheme (MGNREGS)</p>
+      </article>
+    </div>
+  </section>
+
   <!-- Substack -->
   <section class="section">
     <h2>Substack</h2>
