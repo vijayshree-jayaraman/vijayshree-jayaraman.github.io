@@ -64,6 +64,7 @@ permalink: /writing/
         This paper examines the causal effect of electing a female Gram Panchayat (GP)
         president on public employment provision under the Mahatma Gandhi National
         Rural Employment Guarantee Scheme (MGNREGS).
+        <i> Under Review (Journal of Development Economics) <i>
       </p>
     </article>
   </div>
