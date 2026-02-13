@@ -23,7 +23,6 @@ permalink: /writing/
           </p>
         </blockquote>
       </article>
-
       <article class="card">
         <h4>
           <a href="https://www.thehindu.com/data/funding-freeze-brings-mgnregs-to-a-standstill-in-west-bengal/article68810684.ece" target="_blank">
@@ -33,7 +32,6 @@ permalink: /writing/
         <img src="/assets/images/article2.jpeg" alt="Article 2 Image" style="max-width:100%;">
         <p>Along with Advait Moharir on the recent funding freeze for NREGS in West Bengal, we find that less work was taken up by SC/ST households; and administration costs and not wages made up the bulk of the expenses.</p>
       </article>
-
       <article class="card">
         <h4>
           <a href="https://www.thehindu.com/opinion/op-ed/the-nobel-in-economics-as-a-need-to-course-correct/article67537202.ece" target="_blank">
@@ -51,21 +49,25 @@ permalink: /writing/
     <div class="card-grid">
       <article class="card">
         <h4>
-          <a href="https://azimpremjiuniversity.edu.in/publications/2023/cse-working-paper-series/the-unhappy-marriage-of-womens-work-and-spousal-violence-in-india" target="_blank">
-            The Unhappy Marriage of Women's Work and Spousal Violence in India
-          </a>
-        </h4>
-        <p>Working paper exploring the intersection between women's labor participation and domestic violence in India.</p>
-      </article>
-
-      <article class="card">
-        <h4>
-          <a href="https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&dl=0" target="_blank">
+          <a href="[https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&dl=0](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5786482)" target="_blank">
             Is Gender Parity Costly? Evidence from Rural Local Body Elections
           </a>
         </h4>
         <p>This paper examines the causal effect of electing a female Gram Panchayat (GP) president on public employment provision under the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS).</p>
         <p><em>Under Review (Journal of Development Economics)</em></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card-grid">
+      <article class="card">
+        <h4>
+          <a href="https://azimpremjiuniversity.edu.in/publications/2023/cse-working-paper-series/the-unhappy-marriage-of-womens-work-and-spousal-violence-in-india" target="_blank">
+            The Unhappy Marriage of Women's Work and Spousal Violence in India
+          </a>
+        </h4>
+        <p>Working paper exploring the intersection between women's labor participation and domestic violence in India.</p>
       </article>
     </div>
   </section>
@@ -83,4 +85,4 @@ permalink: /writing/
       </article>
     </div>
   </section>
-</div>
+</div>>
