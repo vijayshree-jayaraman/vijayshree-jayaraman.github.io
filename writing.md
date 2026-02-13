@@ -15,13 +15,10 @@ permalink: /writing/
             It's time for a holistic strategy to foster women's entrepreneurship
           </a>
         </h4>
-        <img src="/assets/images/article1.jpeg" alt="Women's Entrepreneurship" style="max-width:100%;">
-        <p>Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion. We highlight the need for legal empowerment, mentoring, and sector-specific interventions to truly unlock the potential of women entrepreneurs in India.</p>
+        <img src="/assets/images/article1.jpeg" alt="Article 1" style="max-width:100%;">
+        <p>Written with Vidhya Soundararajan, we argue for a comprehensive strategy that goes beyond financial inclusion.</p>
         <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            Thread with key insights and charts: 
-            <a href="https://x.com/Vijayshreeeee/status/1947974590334152807">View on X</a>
-          </p>
+          <p lang="en" dir="ltr">Thread with key insights and charts <a href="https://x.com/Vijayshreeeee/status/1947974590334152807">link to first tweet</a></p>
         </blockquote>
       </article>
 
@@ -31,18 +28,8 @@ permalink: /writing/
             Funding freeze brings MGNREGS to a standstill in West Bengal
           </a>
         </h4>
-        <img src="/assets/images/article2.jpeg" alt="MGNREGS West Bengal" style="max-width:100%;">
-        <p>Along with Advait Moharir on the recent funding freeze for NREGS in West Bengal, we find that less work was taken up by SC/ST households; and administration costs and not wages made up the bulk of the expenses.</p>
-      </article>
-
-      <article class="card">
-        <h4>
-          <a href="https://www.thehindu.com/opinion/op-ed/the-nobel-in-economics-as-a-need-to-course-correct/article67537202.ece" target="_blank">
-            The Nobel in economics as a need to course correct
-          </a>
-        </h4>
-        <img src="/assets/images/article3.jpeg" alt="Nobel Economics" style="max-width:100%;">
-        <p>I ask why it took over half a century for the Nobel committee to recognise economic research addressing gender inequalities in the economy.</p>
+        <img src="/assets/images/article2.jpeg" alt="Article 2" style="max-width:100%;">
+        <p>Along with Advait Moharir on the recent funding freeze for NREGS in West Bengal.</p>
       </article>
 
     </div>
@@ -67,14 +54,14 @@ permalink: /writing/
             Is Gender Parity Costly? Evidence from Rural Local Body Elections
           </a>
         </h4>
-        <p>This paper examines the causal effect of electing a female Gram Panchayat (GP) president on public employment provision under the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS).</p>
+        <p>This paper examines the causal effect of electing a female Gram Panchayat (GP) president on public employment provision under MGNREGS.</p>
         <p><strong>Under Review:</strong> <em>Journal of Development Economics</em></p>
       </article>
 
     </div>
   </section>
 
-  <section class="section">
+  <section class="section substack-box">
     <h2>Substack</h2>
     <div class="card-grid">
       <article class="card">
@@ -83,8 +70,8 @@ permalink: /writing/
             Substack - Working Papers
           </a>
         </h4>
-        <p>I like writing, economics and data—trying something new with all of that here!</p>
+        <p>I like writing, economics and data - trying something new with all of that here!</p>
       </article>
     </div>
   </section>
-</div>
+</div>>
