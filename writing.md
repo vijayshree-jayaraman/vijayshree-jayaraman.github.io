@@ -23,6 +23,7 @@ permalink: /writing/
           </p>
         </blockquote>
       </article>
+
       <article class="card">
         <h4>
           <a href="https://www.thehindu.com/data/funding-freeze-brings-mgnregs-to-a-standstill-in-west-bengal/article68810684.ece" target="_blank">
@@ -32,6 +33,7 @@ permalink: /writing/
         <img src="/assets/images/article2.jpeg" alt="Article 2 Image" style="max-width:100%;">
         <p>Along with Advait Moharir on the recent funding freeze for NREGS in West Bengal, we find that less work was taken up by SC/ST households; and administration costs and not wages made up the bulk of the expenses.</p>
       </article>
+
       <article class="card">
         <h4>
           <a href="https://www.thehindu.com/opinion/op-ed/the-nobel-in-economics-as-a-need-to-course-correct/article67537202.ece" target="_blank">
@@ -55,6 +57,7 @@ permalink: /writing/
         </h4>
         <p>Working paper exploring the intersection between women's labor participation and domestic violence in India.</p>
       </article>
+
       <article class="card">
         <h4>
           <a href="https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&dl=0" target="_blank">
@@ -76,7 +79,7 @@ permalink: /writing/
             Substack - Working Papers
           </a>
         </h4>
-        <p>I like writing through numbers, and I am trying to do that more often</p>
+        <p>I like writing, economics and data - trying something new with all of that here!</p>
       </article>
     </div>
   </section>
