@@ -62,7 +62,7 @@ description: Home — Vijayshree Jayaraman
 
       <div style="flex-grow: 1;">
         <h4>
-          <a href="https://www.dropbox.com/scl/fi/otoowrctxsx89e13y7skd/cost_of_gender_parity_working_paper.pdf?rlkey=lxb51hq370ioy7vyoabyfif58&dl=0" 
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5786482"
              target="_blank" rel="noopener noreferrer">
             Is Gender Parity Costly? Evidence from Rural Local Body Elections
           </a>
