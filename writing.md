@@ -5,7 +5,7 @@ permalink: /writing/
 ---
 
 <div class="container">
-  <section class="section">
+  <section class="section popular-writing">
     <h2>Popular Writing</h2>
     <div class="card-grid">
       <article class="card">
