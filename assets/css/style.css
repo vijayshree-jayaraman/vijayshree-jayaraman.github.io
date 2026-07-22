@@ -9,6 +9,8 @@
   --border:rgba(111,91,96,.14);
   --shadow:rgba(95,84,73,.10);
   --focus:#9b6a6c;
+  --taupe:#92776f;
+  --section-taupe:rgba(146,119,111,.09);
   --maxw:980px;
   --radius:12px;
 }
@@ -23,6 +25,8 @@
   --border:rgba(206,223,217,.16);
   --shadow:rgba(45,37,31,.25);
   --focus:#cedfd9;
+  --taupe:#80675f;
+  --section-taupe:rgba(176,147,139,.13);
 }
 *{box-sizing:border-box}
 body{
@@ -39,6 +43,7 @@ a:hover{text-decoration-thickness:2px;text-underline-offset:3px}
 .site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
 .nav-container{display:flex;align-items:center;justify-content:space-between;padding:1rem}
 .brand{font-family:"EB Garamond", Georgia, serif;font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none}
+.site-header .brand{color:var(--taupe)}
 .site-nav{display:flex;gap:1rem}
 .site-nav a{color:var(--muted);text-decoration:none;font-weight:500}
 .site-nav a:hover{color:var(--text)}
@@ -61,7 +66,7 @@ a:hover{text-decoration-thickness:2px;text-underline-offset:3px}
 .btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}
 
 /* Sections and cards */
-.section{margin:2rem 0}
+.section{margin:2rem 0;padding:1.1rem;border-radius:var(--radius);background:var(--section-taupe)}
 .section h2{font-family:"EB Garamond", Georgia, serif;margin-bottom:1rem;font-size:1.1rem}
 .section-heading{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .section-heading>a{font-size:.9rem}
