@@ -16,7 +16,7 @@ permalink: /writing/
         </h4>
         <p>Written with Vidhya Soundararajan, Aishwarya Bhamidipati, and Twincle Halder. <a href="https://www.ideasforindia.in/topics/money-finance/financialisation-of-indian-households-trends-in-savings-and-borrowing-hindi" target="_blank">Hindi version</a>.</p>
       </article>
-      <article class="card">
+      <article class="card with-image">
         <h4>
           <a href="https://www.livemint.com/opinion/online-views/women-entrepreneurship-empowerment-labour-force-participation-economic-census-mudra-yojana-pmjdy-businesswomen-11753091186409.html" target="_blank">
             It's time for a holistic strategy to foster women's entrepreneurship
@@ -31,7 +31,7 @@ permalink: /writing/
           </p>
         </blockquote>
       </article>
-      <article class="card">
+      <article class="card with-image">
         <h4>
           <a href="https://www.thehindu.com/data/funding-freeze-brings-mgnregs-to-a-standstill-in-west-bengal/article68810684.ece" target="_blank">
             Funding freeze brings MGNREGS to a standstill in West Bengal
@@ -40,7 +40,7 @@ permalink: /writing/
         <img src="/assets/images/article2.jpeg" alt="Article 2 Image" style="max-width:100%;">
         <p>Along with Advait Moharir on the recent funding freeze for NREGS in West Bengal, we find that less work was taken up by SC/ST households; and administration costs and not wages made up the bulk of the expenses.</p>
       </article>
-      <article class="card">
+      <article class="card with-image">
         <h4>
           <a href="https://www.thehindu.com/opinion/op-ed/the-nobel-in-economics-as-a-need-to-course-correct/article67537202.ece" target="_blank">
             The Nobel in economics as a need to course correct
