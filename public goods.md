@@ -6,7 +6,7 @@ permalink: /public-goods/
 
 <div class="container mt-5">
   <section>
-    <h2>Datasets & Repos</h2>
+    <h2>Data/Related Resources</h2>
 
     <table class="table table-striped mt-3">
       <thead>
@@ -24,7 +24,7 @@ permalink: /public-goods/
         </tr>
         <tr>
           <td><strong>BSR district panel</strong></td>
-          <td>BSR district-quarterly panel, 2003–2022.</td>
+          <td>A harmonised, cleaned district-quarterly panel of BSR data from DBIE, disaggregated by bank group and population group, covering 2003–2022.</td>
           <td><a href="https://github.com/vijayshree-jayaraman/-bsr-district-panel" target="_blank">GitHub</a></td>
         </tr>
         <tr>

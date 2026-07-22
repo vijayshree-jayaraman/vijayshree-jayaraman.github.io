@@ -1,12 +1,12 @@
 :root{
-  --bg:#ebfcfb;
-  --surface:#ffffff;
-  --surface-soft:#cedfd9;
-  --text:#5f5449;
-  --muted:#6f6258;
+  --bg:#f6f1ed;
+  --surface:#fffafa;
+  --surface-soft:#efe5e2;
+  --text:#6f5b60;
+  --muted:#75685d;
   --accent:#8a5b5e;
   --highlight:#9b6a6c;
-  --border:rgba(95,84,73,.14);
+  --border:rgba(111,91,96,.14);
   --shadow:rgba(95,84,73,.10);
   --focus:#9b6a6c;
   --maxw:980px;
@@ -43,6 +43,8 @@ a:hover{text-decoration-thickness:2px;text-underline-offset:3px}
 .site-nav a{color:var(--muted);text-decoration:none;font-weight:500}
 .site-nav a:hover{color:var(--text)}
 .nav-actions{display:flex;gap:0.5rem;align-items:center}
+.theme-toggle{background:transparent;border:1px solid currentColor;border-radius:999px;color:inherit;cursor:pointer;font:inherit;font-size:.82rem;font-weight:600;padding:.32rem .65rem}
+.theme-toggle:hover{opacity:.72}
 .icon-btn{background:none;border:0;font-size:1.15rem;cursor:pointer;color:var(--muted);padding:0.35rem;border-radius:6px}
 .icon-btn:hover{background:var(--surface-soft)}
 .nav-toggle{display:none}

@@ -73,6 +73,10 @@
       --header-bg: #ebfcfb;
       --header-text: #5f5449;
     }
+    body[data-theme="light"] {
+      --header-bg: #fffafa;
+      --header-text: #6f5b60;
+    }
 
     /* Nav styling */
     .site-header a:focus,
@@ -99,6 +103,10 @@
       font-weight: 600;
       font-size: 1rem;
       color: inherit;
+    }
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: #9b6a6c;
     }
     .icon-btn {
       background: transparent;
@@ -206,6 +214,7 @@
       </nav>
 
       <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">Light</button>
         <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -229,6 +238,23 @@
   <script>
     const navToggle = document.getElementById('nav-toggle');
     const siteNav = document.getElementById('site-nav');
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('preferred-theme');
+
+    function setTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      themeToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+
+    setTheme(savedTheme === 'light' ? 'light' : 'dark');
+
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('preferred-theme', nextTheme);
+      setTheme(nextTheme);
+    });
+
     navToggle.addEventListener('click', () => {
       siteNav.classList.toggle('show');
       navToggle.setAttribute('aria-expanded', siteNav.classList.contains('show'));
