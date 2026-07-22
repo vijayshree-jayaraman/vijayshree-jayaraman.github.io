@@ -1,12 +1,13 @@
 title: "Vijayshree Jayaraman"
-email: you@example.com
-description: " portfolio site"
+email: jvijayshree26@gmail.com
+description: "Economist working on development finance, labour economics, and applied econometrics."
 baseurl: "" 
-url: "" 
+url: "https://vijayshree-jayaraman.github.io"
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 sass:
   style: compressed
 

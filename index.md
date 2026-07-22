@@ -1,95 +1,51 @@
 ---
 layout: default
 title: Home
-description: Home — Vijayshree Jayaraman
+description: Vijayshree Jayaraman - PhD student in Economics at the University of Illinois Urbana-Champaign
 ---
 
-<style>
-  /* Hero section stacking on mobile */
-  @media (max-width: 600px) {
-    .hero {
-      flex-direction: column !important;
-      gap: 1rem !important;
-      align-items: flex-start; /* better alignment for stacked */
-    }
-    .hero > div {
-      min-width: 100% !important;
-    }
-    .hero img {
-      max-width: 100% !important;
-      height: auto !important;
-      border-radius: 8px;
-    }
-  }
-
-  /* Optional: add some spacing below h1 in hero */
-  .hero-inner h1 {
-    margin-bottom: 0.5rem;
-  }
-</style>
-
 <div class="container">
-  <section class="hero" style="display: flex; align-items: center; gap: 20px;">
-    <!-- Image on the left -->
-    <div>
-      <img src="/assets/images/profile.jpeg" alt="Vijayshree Jayaraman" style="max-width:200px; height:auto; border-radius: 8px;">
+  <section class="hero">
+    <div class="hero-photo">
+      <img src="{{ '/assets/images/profile.jpeg' | relative_url }}" alt="Portrait of Vijayshree Jayaraman">
     </div>
-
-    <!-- Text on the right -->
     <div class="hero-inner">
+      <p class="eyebrow">Economist · Researcher · Open-source contributor</p>
       <h1>Vijayshree Jayaraman</h1>
-      <p class="lede">
-        Hi, Welcome to my webpage! I am currently a Research Associate at 
-        <a href="https://www.cafral.org.in/" target="_blank" rel="noopener noreferrer">Centre for Advanced Financial Research, Mumbai, India</a>.<br><br>
-        Both my undergraduate and masters in economics was from 
-        <a href="https://azimpremjiuniversity.edu.in/" target="_blank" rel="noopener noreferrer">Azim Premji University</a> and my interests include 
-        <strong>applied econometrics, development finance, and labour economics</strong>.
-      </p>
+      <p class="lede">I am a PhD student in Economics at the <a href="https://economics.illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a>. My research interests include applied econometrics, development finance, and labour economics, with a focus on financial inclusion, gender, and public programmes in India.</p>
+      <p class="lede">Previously, I was a Research Associate at the <a href="https://www.cafral.org.in/" target="_blank" rel="noopener noreferrer">Centre for Advanced Financial Research and Learning (CAFRAL)</a> in Mumbai. I earned my BA (Hons) and MA in Economics from <a href="https://azimpremjiuniversity.edu.in/" target="_blank" rel="noopener noreferrer">Azim Premji University</a>.</p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ '/writing/' | relative_url }}">Read my work</a>
+        <a class="btn btn-outline" href="{{ '/assets/files/Vijayshree_Jayaraman_CV.pdf' | relative_url }}">Download CV</a>
+      </div>
     </div>
   </section>
 
-<section class="section">
-  <h2>Recent Writing</h2>
-  <div class="card-grid" style="display: flex; gap: 20px; align-items: flex-start;">
-    
-    <article class="card" style="flex: 1; display: flex; gap: 20px;">
-      
-      <!-- Replace this image with the one you want -->
-      <div style="flex-shrink: 0;">
-        <img src="/assets/images/mgnregs.png" alt="MGNREGS Article Image" 
-             style="max-width:200px; height:auto; border-radius: 8px;">
-      </div>
-
-      <div style="flex-grow: 1;">
-        <h4>
-          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5786482"
-             target="_blank" rel="noopener noreferrer">
-            Is Gender Parity Costly? Evidence from Rural Local Body Elections
-          </a>
-        </h4>
-        <p>
-          This paper examines the causal effect of electing a female Gram Panchayat (GP) president on public 
-          employment provision under the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS). 
-        </p>
-      </div>
-
-    </article>
-  
-  </div>
-</section>
-
-
-
   <section class="section">
-    <h2>Recent Repository</h2>
+    <div class="section-heading"><h2>What's New</h2><a href="{{ '/public-goods/' | relative_url }}">All public goods →</a></div>
     <div class="card-grid">
-      <article class="card">
-        <h4>ASUSE Cross Sections</h4>
-        <p>
-          Annual Survey of Unincorporated Sector Enterprises — cleaned data and scripts.  
-          <a href="https://github.com/advaitmoharir/ASUSE" target="_blank" rel="noopener noreferrer">View Repository on GitHub</a>
-        </p>
+      <article class="card featured-card">
+        <p class="card-kicker">May 2026 · Stata package</p>
+        <h3><a href="https://github.com/vijayshree-jayaraman/naam" target="_blank" rel="noopener noreferrer">naam</a></h3>
+        <p>A one-stop package for consistent string encoding, ID management, and label tracking across Stata datasets. Available from SSC with <code>ssc install naam, all</code>.</p>
+      </article>
+      <article class="card featured-card">
+        <p class="card-kicker">May 2026 · Ideas for India</p>
+        <h3><a href="https://www.ideasforindia.in/topics/money-finance/financialisation-of-indian-households-trends-in-savings-and-borrowing" target="_blank" rel="noopener noreferrer">Financialisation of Indian households</a></h3>
+        <p>With Vidhya Soundararajan, Aishwarya Bhamidipati, and Twincle Halder. We trace shifts in household saving and borrowing and the risks of rising consumption-led credit.</p>
+        <p class="card-links"><a href="https://www.ideasforindia.in/topics/money-finance/financialisation-of-indian-households-trends-in-savings-and-borrowing-hindi" target="_blank" rel="noopener noreferrer" lang="hi">हिन्दी में पढ़ें</a></p>
+      </article>
+      <article class="card featured-card">
+        <p class="card-kicker">March 2026 · Open data</p>
+        <h3><a href="https://github.com/vijayshree-jayaraman/-bsr-district-panel" target="_blank" rel="noopener noreferrer">BSR district panel</a></h3>
+        <p>A reproducible district-quarter panel of scheduled commercial bank offices, deposits, and credit in India from 2003Q4 to 2022Q3.</p>
       </article>
     </div>
+  </section>
+
+  <section class="section spotlight">
+    <p class="card-kicker">Working paper</p>
+    <h2><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5786482" target="_blank" rel="noopener noreferrer">Is Gender Parity Costly? Evidence from Rural Local Body Elections</a></h2>
+    <p>This paper examines the causal effect of electing a woman Gram Panchayat president on public employment provision under MGNREGS. It is currently under review at the <em>Journal of Development Economics</em>.</p>
   </section>
 </div>

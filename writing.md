@@ -9,6 +9,12 @@ permalink: /writing/
     <h2>Popular Writing</h2>
     <div class="card-grid">
       <article class="card">
+        <p class="card-kicker">Ideas for India · 26 May 2026</p>
+        <h4><a href="https://www.ideasforindia.in/topics/money-finance/financialisation-of-indian-households-trends-in-savings-and-borrowing" target="_blank" rel="noopener noreferrer">Financialisation of Indian households: Trends in savings and borrowing</a></h4>
+        <p>With Vidhya Soundararajan, Aishwarya Bhamidipati, and Twincle Halder. We document declining net financial savings, the shift toward market-linked assets, and rapid growth in consumption-led credit, with repayment stress concentrated among vulnerable borrowers.</p>
+        <p class="card-links"><a href="https://www.ideasforindia.in/topics/money-finance/financialisation-of-indian-households-trends-in-savings-and-borrowing-hindi" target="_blank" rel="noopener noreferrer" lang="hi">हिन्दी संस्करण पढ़ें</a></p>
+      </article>
+      <article class="card">
         <h4>
           <a href="https://www.livemint.com/opinion/online-views/women-entrepreneurship-empowerment-labour-force-participation-economic-census-mudra-yojana-pmjdy-businesswomen-11753091186409.html" target="_blank">
             It's time for a holistic strategy to foster women's entrepreneurship
@@ -72,15 +78,16 @@ permalink: /writing/
   </section>
 
   <section class="section">
-    <h2>Substack</h2>
+    <h2>Essay</h2>
     <div class="card-grid">
       <article class="card">
+        <p class="card-kicker">Working Papers · Substack</p>
         <h4>
-          <a href="https://substack.com/@vijayshreejayaraman" target="_blank">
-            Substack - Working Papers
+          <a href="https://workingpapers.substack.com/p/liberal-in-progress" target="_blank" rel="noopener noreferrer">
+            Liberal, In Progress
           </a>
         </h4>
-        <p>I like writing, economics and data - trying something new with all of that here!</p>
+        <p>A personal reflection on inclusiveness, privilege, and what Mumbai taught me about making liberal values part of everyday practice.</p>
       </article>
     </div>
   </section>
