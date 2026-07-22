@@ -1,42 +1,28 @@
-(function(){
-  var nav = document.getElementById('site-nav');
-  var navToggle = document.getElementById('nav-toggle');
-  var themeBtn = document.getElementById('theme-toggle');
-  var root = document.documentElement;
+(function () {
+  const root = document.documentElement;
+  const themeButton = document.getElementById('theme-toggle');
+  const themeLabel = document.getElementById('theme-label');
 
-  // nav toggle
-  if (navToggle) {
-    navToggle.addEventListener('click', function(){
-      if (nav.style.display === 'flex') {
-        nav.style.display = 'none';
-      } else {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-      }
+  function applyTheme(theme, persist) {
+    const isDark = theme === 'dark';
+    root.dataset.theme = isDark ? 'dark' : 'light';
+
+    if (persist) {
+      localStorage.setItem('preferred-theme', root.dataset.theme);
+    }
+
+    if (themeButton && themeLabel) {
+      themeButton.setAttribute('aria-pressed', String(isDark));
+      themeButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeLabel.textContent = isDark ? 'Light' : 'Dark';
+    }
+  }
+
+  applyTheme(root.dataset.theme || 'light', false);
+
+  if (themeButton) {
+    themeButton.addEventListener('click', function () {
+      applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
     });
-  }
-
-  // theme toggle
-  function setTheme(theme) {
-    document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('preferred-theme', theme);
-    if (theme === 'dark') themeBtn.textContent = '☀️';
-    else themeBtn.textContent = '🌙';
-  }
-
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function(){
-      var cur = document.body.getAttribute('data-theme') || 'light';
-      setTheme(cur === 'light' ? 'dark' : 'light');
-    });
-  }
-
-  // Initialize from localStorage or system
-  var saved = localStorage.getItem('preferred-theme');
-  if (saved) {
-    setTheme(saved);
-  } else {
-    var media = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(media ? 'dark' : 'light');
   }
 })();
