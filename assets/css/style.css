@@ -1,39 +1,28 @@
 :root{
-  --stone-brown:#5f5449;
-  --smoky-rose:#9b6a6c;
-  --rosy-taupe:#b09398;
-  --azure-mist:#cedfd9;
-  --azure-mist-light:#ebfcfb;
   --bg:#ebfcfb;
   --surface:#ffffff;
-  --surface-soft:#e1f1ee;
+  --surface-soft:#cedfd9;
   --text:#5f5449;
   --muted:#6f6258;
-  --accent:#895b5e;
-  --accent-soft:#b09398;
-  --border:rgba(95,84,73,.16);
-  --shadow:rgba(95,84,73,.12);
-  --focus:#895b5e;
-  --header-bg:rgba(235,252,251,.94);
-  --header-text:#5f5449;
+  --accent:#8a5b5e;
+  --highlight:#9b6a6c;
+  --border:rgba(95,84,73,.14);
+  --shadow:rgba(95,84,73,.10);
+  --focus:#9b6a6c;
   --maxw:980px;
   --radius:12px;
-  color-scheme:light;
 }
 [data-theme="dark"]{
-  --bg:#352f2a;
-  --surface:#493f37;
-  --surface-soft:#55493f;
+  --bg:#5f5449;
+  --surface:#51473e;
+  --surface-soft:#695d52;
   --text:#ebfcfb;
   --muted:#cedfd9;
-  --accent:#cedfd9;
-  --accent-soft:#b09398;
-  --border:rgba(206,223,217,.18);
-  --shadow:rgba(0,0,0,.25);
-  --focus:#ebfcfb;
-  --header-bg:rgba(73,63,55,.94);
-  --header-text:#ebfcfb;
-  color-scheme:dark;
+  --accent:#ebfcfb;
+  --highlight:#b09398;
+  --border:rgba(206,223,217,.16);
+  --shadow:rgba(45,37,31,.25);
+  --focus:#cedfd9;
 }
 *{box-sizing:border-box}
 body{
@@ -43,21 +32,17 @@ body{
   font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
-  transition:background-color .25s ease,color .25s ease;
 }
 a{color:var(--accent)}
 a:hover{text-decoration-thickness:2px;text-underline-offset:3px}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
-.site-header{background:var(--header-bg);color:var(--header-text);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
+.site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
 .nav-container{display:flex;align-items:center;justify-content:space-between;padding:1rem}
 .brand{font-family:"EB Garamond", Georgia, serif;font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none}
 .site-nav{display:flex;gap:1rem}
 .site-nav a{color:var(--muted);text-decoration:none;font-weight:500}
 .site-nav a:hover{color:var(--text)}
 .nav-actions{display:flex;gap:0.5rem;align-items:center}
-.theme-toggle{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text);font:inherit;font-size:.82rem;font-weight:600;padding:.38rem .65rem;cursor:pointer}
-.theme-toggle:hover{background:var(--surface-soft)}
-.theme-icon{font-size:1rem;line-height:1}
 .icon-btn{background:none;border:0;font-size:1.15rem;cursor:pointer;color:var(--muted);padding:0.35rem;border-radius:6px}
 .icon-btn:hover{background:var(--surface-soft)}
 .nav-toggle{display:none}
@@ -86,7 +71,7 @@ a:hover{text-decoration-thickness:2px;text-underline-offset:3px}
 .card p{margin:0;color:var(--muted);font-size:.95rem}
 .card p+p{margin-top:.7rem}
 .card-links a{font-weight:600}
-.featured-card{border-top:3px solid var(--accent)}
+.featured-card{border-top:3px solid var(--highlight)}
 .spotlight{padding:1.5rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);box-shadow:0 8px 22px var(--shadow)}
 .spotlight h2{font-size:1.5rem;margin:.25rem 0 .5rem}
 .spotlight p:last-child{color:var(--muted);margin-bottom:0}

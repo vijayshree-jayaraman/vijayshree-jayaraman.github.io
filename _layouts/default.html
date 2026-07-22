@@ -3,14 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <script>
-    (function () {
-      const saved = localStorage.getItem('preferred-theme');
-      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme = saved || (systemDark ? 'dark' : 'light');
-    })();
-  </script>
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}" />
   <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
@@ -75,6 +67,11 @@
       font-size: 1.5rem;
       text-decoration: none;
       color: inherit;
+    }
+
+    body[data-theme="dark"] {
+      --header-bg: #ebfcfb;
+      --header-text: #5f5449;
     }
 
     /* Nav styling */
@@ -170,7 +167,7 @@
     }
     [data-theme="dark"] .site-footer { background: var(--surface); color: var(--muted); }
     .site-footer a {
-      color: var(--accent, #2f6fdb);
+      color: var(--accent, #9b6a6c);
       text-decoration: none;
       margin: 0 0.5rem;
     }
@@ -194,7 +191,7 @@
     }
   </style>
 </head>
-<body>
+<body data-theme="dark">
   <header class="site-header">
     <div class="container nav-container">
       <div class="brand-theme">
@@ -209,10 +206,6 @@
       </nav>
 
       <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-          <span class="theme-icon" aria-hidden="true">◐</span>
-          <span id="theme-label">Dark</span>
-        </button>
         <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -233,7 +226,6 @@
     </div>
   </footer>
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <script>
     const navToggle = document.getElementById('nav-toggle');
     const siteNav = document.getElementById('site-nav');
